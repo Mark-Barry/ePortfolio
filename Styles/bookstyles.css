@@ -1,0 +1,32 @@
+.bookImgDiv{
+    float: left;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.bookDescDiv{
+    float: left;
+    width: 60%;
+    margin: 10px;
+    text-align: center;
+}
+
+#bookImg{
+    width: 80%;
+    height: auto;
+}
+
+.addCont{
+    float: left;
+    text-align: left;
+    width: 50%;
+    position: unset;
+}
+.modal{
+display: none;
+position: fixed;
+top: 0px;
+left: 0px;
+
+}

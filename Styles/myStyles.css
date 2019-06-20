@@ -1,0 +1,162 @@
+/*These are a bad idea and I should create classes instead of overriding
+  an entire tag. what happens when you forget you've overrriden the tag?
+  Nothing fun.
+
+  This CSS is full of this overriding a tag shit. I need to fix it.
+*/
+.bgImage{
+    background-color: darkgray;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+h1{
+    color: rgb(180, 3, 3);
+    text-align: center;
+}
+ul{
+    
+    background-image: "../";
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li{
+    float: left;
+    box-sizing: unset;
+} 
+
+.liMenu{
+    float: left;
+    box-sizing: unset;
+}
+  .active {
+    background-color: #4CAF50;
+  }
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar a {
+    position: sticky;
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ 
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(146, 142, 142);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*
+  Created some basic classes to override the already overriden initial values
+  Yes. It's redundant. I'll fix it when i get better at this shit
+*/
+.basicUL{
+    background-color: initial;
+}
+.basiclist{
+      float: initial;
+      box-sizing: unset;
+      color: initial;
+}
+.basicA{
+      display: initial;
+      padding: initial;
+      color: black;
+}
+.basicH1{
+      display: initial;
+      padding: initial;
+      color: black;
+}
+
+
+/*
+    For the books.html page to control the layout coming from the .csv file
+*/
+.bookDiv{
+    float: left;
+    text-align: center;
+    width: 30%;
+    margin: 10px;
+}
+
+.bookImg{
+    height: 30%;
+    width: auto;
+}
+
+.seriesH1{
+    display: initial;
+    margin: 10px;
+    color: red;
+}
+
+/*
+    For the Home.html page layout
+*/
+#homeContentDiv{
+    width: 100%;
+}
+#descDiv{
+    margin-top: 5%;
+    float: left;
+    width: 60%;
+    text-align: center;
+}
+#imageDiv{
+    float: left;
+    width: 35%;
+    text-align: center;
+}
+#imageDiV #portrait{
+    margin-top: 5%;
+    width: 50%;
+    height: 50%;
+}

@@ -1,0 +1,16 @@
+#content{
+    width: 100%;
+    text-align: center;
+}
+
+#coverCanvas{
+    float: left;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 0%;
+    width: 508px;
+    height: 701px;
+    border-width: 10px;
+    border-color: black;
+    background-color: white;
+}
