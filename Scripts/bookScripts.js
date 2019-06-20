@@ -19,7 +19,7 @@ $(function () {
                     "id": "book-" +
                         i
                 });
-                $(".contentDiv").append(div);
+                $(".booksDiv").append(div);
 
                 /*Add the book image to the div  located to the left of the screen*/
                 let bookImgDiv = $("<div>", {

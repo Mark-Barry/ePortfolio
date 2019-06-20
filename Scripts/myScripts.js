@@ -24,25 +24,25 @@ $(function() {
             {
                 let divSeries= $("<div>", {"class":"seriesDiv"});
                 let series= $("<h1>", {"class":"seriesH1"}).append(bookList[i].series);
-                $("#contentDiv").append(divSeries);
+                $("#booksDiv").append(divSeries);
                 divSeries.append(series);
             }
             if(count == 3)
             {   
                 let divSeries= $("<div>", {"class":"seriesDiv"});
                 let series= $("<h1>", {"class":"seriesH1"}).append(bookList[i].series);
-                $("#contentDiv").append(divSeries);
+                $("#booksDiv").append(divSeries);
                 divSeries.append(series);
             }
             if(count == 8)
             {   
                 let divSeries= $("<div>", {"class":"seriesDiv3"});
                 let series= $("<h1>", {"class":"seriesH1"}).append(bookList[i].series);
-                $("#contentDiv").append(divSeries);
+                $("#booksDiv").append(divSeries);
                 divSeries.append(series);   
             }
             
-            $("#contentDiv").append(div);
+            $("#booksDiv").append(div);
             
             let book = $("<h2>").append(bookList[i].series + ": " + bookList[i].numberInSeries + ", " + bookList[i].name);
             div.append(book);
