@@ -1,0 +1,10 @@
+.indexbgImage{
+    animation-name: changeBG;
+    animation-duration: 3s;
+    background-color: darkgray;
+}
+
+@keyframes changeBG{
+    from{background-color: black;}
+    to{background-color: darkgray;}
+}

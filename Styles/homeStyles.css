@@ -1,0 +1,19 @@
+#homeContentDiv{
+    width: 100%;
+}
+#descDiv{
+    margin-top: 5%;
+    float: left;
+    width: 60%;
+    text-align: center;
+}
+#imageDiv{
+    float: left;
+    width: 35%;
+    text-align: center;
+}
+#imageDiV #portrait{
+    margin-top: 5%;
+    width: 50%;
+    height: 50%;
+}
