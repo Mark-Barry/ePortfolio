@@ -9,11 +9,11 @@ body{
 }
 
 .bgImage{
-    background-color: darkgray;
+    background-color: darkgrey;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../Resources/Images/smoke_slow.gif);
-    opacity: 0.9;
+    /* opacity: 0.9; */
     /* animation-name: fadeIn;
     animation-duration: 1.5s; */
 }
