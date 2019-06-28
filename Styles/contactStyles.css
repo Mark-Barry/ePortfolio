@@ -1,0 +1,49 @@
+form{
+    width: 95%;
+    height: auto;
+    text-align: center;
+    margin: 2%;
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+}
+
+.nameDiv{
+    margin-left: 2%;
+    text-align: left;
+    width: 45%;
+    float: left;
+}
+
+.nameDivContent20{
+    width: 13%;
+    float: left;
+    align-content: right;
+}
+
+.nameDivContent{
+    width: 45%;
+    float: left;
+}
+
+#contactText{
+    width: 90%;
+    height: 33%;
+    margin: 3%;
+    text-align: left;
+}
+
+#submitButton{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    margin: 1%;
+    width: 10%;
+    height: 4%;
+}
+
+#submitButton:hover{
+    background-color: bisque;
+    width: 12%;
+    height: 5%;
+    font-size: xx-large;
+}

@@ -1,36 +1,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="../Styles/myStyles.css" />
-  <script src="../Scripts/myScripts.js"></script>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../Styles/myStyles.css" />
+	<link rel="stylesheet" href="../Styles/contactStyles.css" />
+	<!-- <script src="../Scripts/myScripts.js"></script> -->
 
-  <title>
-    Brandon Sanderson Library: Contact
-  </title>
+	<title>
+		Brandon Sanderson Library: Contact
+	</title>
 </head>
 
 <body class="bgImage">
-  <ul>
-    <li><a href="./Home.html">Home</a></li>
-    <li><a href="./DesignACover.html">Design a Cover</a></li>
-    <li class="dropdown">
-      <a href="./Books.html" class="dropbtn">Books</a>
-      <div class="dropdown-content">
-        <!-- <a href="./Books/The_Final_Empire.html">The Final Empire</a>
+	<ul>
+		<li><a href="./Home.html">Home</a></li>
+		<li><a href="./DesignACover.html">Design a Cover</a></li>
+		<li class="dropdown">
+			<a href="./Books.html" class="dropbtn">Books</a>
+			<div class="dropdown-content">
+				<!-- <a href="./Books/The_Final_Empire.html">The Final Empire</a>
                 <a href="./Books/The_Well_Of_Ascension.html">The Well of Ascension</a>
                 <a href="./Books/Hero_Of_Ages.html">The Hero Of Ages</a> -->
-      </div>
-    </li>
-    <li><a href="./About.html">About</a></li>
-    <li><a class="active" href="./Contact.html">Contact</a></li>
-  </ul>
+			</div>
+		</li>
+		<li><a href="./About.html">About</a></li>
+		<li><a class="active" href="./Contact.html">Contact</a></li>
+	</ul>
 
-  <div id="contentDiv">
-		
-    </div>
-
-
+	<div id="contentDiv">
+		<form name="ContactForm" autocomplete="on" id="contactForm" action="mailto:booktestsite@hotmail.com">
+			<div class="nameDiv">
+				<p class="nameDivContent20">First Name:</p>
+				</br>
+				<input type="text" name="FirstName" class="nameDivContent">
+			</div>
+			<div class="nameDiv">
+				<p class="nameDivContent20">Last Name:</p>
+				</br>
+				<input type="text" name="LastName" class="nameDivContent">
+			</div>
+			<div class="nameDiv">
+				<p class="nameDivContent20">Contact Email:</p>
+				</br>
+				<input type="email" name="Email" class="nameDivContent">
+			</div>
+			<textarea name="ContactText" id="contactText" ></textarea>
+			</br>
+			<input type="submit" value="Submit" id="submitButton">
+		</form>
+	</div>
 
 </body>
 

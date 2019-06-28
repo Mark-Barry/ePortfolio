@@ -4,10 +4,16 @@
 
   This CSS is full of this overriding a tag shit. I need to fix it.
 */
+body{
+
+}
+
 .bgImage{
     background-color: darkgray;
     background-size: cover;
     background-repeat: no-repeat;
+    background-image: url(../Resources/Images/smoke_slow.gif);
+    opacity: 0.9;
     /* animation-name: fadeIn;
     animation-duration: 1.5s; */
 }
