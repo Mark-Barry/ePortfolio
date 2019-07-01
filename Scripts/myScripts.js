@@ -1,17 +1,19 @@
-$(function() {
+$(function () {
     $.ajax({
         type: "GET",
         url: "../Data/Books.csv",
         dataType: "text",
-        success: function(data) { displayData(data); }
+        success: function (data) {
+            displayData(data);
+        }
     });
 
-    var count =0;
+    var count = 0;
 
     function displayData(data) {
         var bookList = $.csv.toObjects(data);
         for (var i = 0; i < bookList.length; ++i) {
-            
+
             let div = $("<div>", {
                 "class": "bookDiv",
                 "id": "book-" +
@@ -20,33 +22,42 @@ $(function() {
 
             let br = $("<br>");
 
-            if(count == 0)
-            {
-                let divSeries= $("<div>", {"class":"seriesDiv"});
-                let series= $("<h1>", {"class":"seriesH1"}).append(bookList[i].series);
+            if (count == 0) {
+                let divSeries = $("<div>", {
+                    "class": "seriesDiv"
+                });
+                let series = $("<h1>", {
+                    "class": "seriesH1"
+                }).append(bookList[i].series);
                 $("#booksDiv").append(divSeries);
                 divSeries.append(series);
             }
-            if(count == 3)
-            {   
-                let divSeries= $("<div>", {"class":"seriesDiv"});
-                let series= $("<h1>", {"class":"seriesH1"}).append(bookList[i].series);
+            if (count == 3) {
+                let divSeries = $("<div>", {
+                    "class": "seriesDiv"
+                });
+                let series = $("<h1>", {
+                    "class": "seriesH1"
+                }).append(bookList[i].series);
                 $("#booksDiv").append(divSeries);
                 divSeries.append(series);
             }
-            if(count == 8)
-            {   
-                let divSeries= $("<div>", {"class":"seriesDiv3"});
-                let series= $("<h1>", {"class":"seriesH1"}).append(bookList[i].series);
+            if (count == 8) {
+                let divSeries = $("<div>", {
+                    "class": "seriesDiv3"
+                });
+                let series = $("<h1>", {
+                    "class": "seriesH1"
+                }).append(bookList[i].series);
                 $("#booksDiv").append(divSeries);
-                divSeries.append(series);   
+                divSeries.append(series);
             }
-            
+
             $("#booksDiv").append(div);
-            
+
             let book = $("<h2>").append(bookList[i].series + ": " + bookList[i].numberInSeries + ", " + bookList[i].name);
             div.append(book);
-            
+
             let bookLink = $("<a>", {
                 "bookId": i,
                 "href": "./book.html"
@@ -55,20 +66,24 @@ $(function() {
                 storeData($(this).attr('bookId'));
             });
 
-            let bookImg = $("<img>", { "src": bookList[i].image, "class": "bookImg" });
+            let bookImg = $("<img>", {
+                "src": bookList[i].image,
+                "class": "bookImg"
+            });
             div.append(bookLink.append(bookImg));
 
             div.append(br);
 
             let bookISBN = $("<h3>").append("ISBN: " + bookList[i].ISBN);
             div.append(bookISBN);
-            
+
             let bookDate = $("<h3>").append("Date Published: " + bookList[i].datePublished);
             div.append(bookDate);
             console.log(count);
-            count+=1;
+            count += 1;
         }
     }
+
     function storeData(data) {
         sessionStorage.setItem("book", data);
     }

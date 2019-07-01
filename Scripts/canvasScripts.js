@@ -5,9 +5,14 @@ var paintStyle = getComputedStyle(painting);
 canvas.width = parseInt(paintStyle.getPropertyValue("width"));
 canvas.height = parseInt(paintStyle.getPropertyValue("height"));
 
-var mouse = {x: 0, y: 0};
+var mouse = {
+    x: 0,
+    y: 0
+};
 
-canvas.addEventListener('mouseover', function(e){
+canvas.addEventListener('mouseover', function (e) {
+    console.log("Mouse Over");
+    console.log("X: " + mouse.x + ", Y: " + mouse.y);
     mouse.x = e.pageX - this.offsetLeft;
     mouse.y = e.pageY - this.offsetTop;
 }, false);
@@ -15,19 +20,24 @@ canvas.addEventListener('mouseover', function(e){
 ctx.lineWidth = 3;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.strokeStyle = '#FF0000';
+ctx.strokeStyle = 'Black';
 
-canvas.addEventListener('mousedown', function(e){
+canvas.addEventListener('mousedown', function (e) {
+    console.log("Mouse Down, X: " + mouse.x + ", Y: " + mouse.y);
     ctx.beginPath();
     ctx.moveTo(mouse.x, mouse.y);
     canvas.addEventListener('mousemove', onPaint, false);
 }, false);
 
-canvas.addEventListener('mouseup', function(){
+canvas.addEventListener('mouseup', function () {
+    console.log("Mouse Up");
     canvas.removeEventListener('mousemove', onPaint, false);
 }, false);
 
-var onPaint = function(){
+var onPaint = function (e) {
+    mouse.x = e.pageX - this.offsetLeft;
+    mouse.y = e.pageY - this.offsetTop;
+    console.log("Paint, X: " + mouse.x + ", Y: " + mouse.y);
     ctx.lineTo(mouse.x, mouse.y);
     ctx.stroke();
 };
