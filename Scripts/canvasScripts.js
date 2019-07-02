@@ -53,6 +53,8 @@ function changeColor(e){
     ctx.strokeStyle = e;
 }
 function clear(){
-    ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.beginPath();
+ctx.rect(40, 40, 150, 100);
+ctx.fillStyle = "blue";
+ctx.fill();
 }
