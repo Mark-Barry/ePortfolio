@@ -1,7 +1,7 @@
 var canvas = document.getElementById("coverCanvas");
 var ctx = canvas.getContext("2d");
-var painting = document.getElementById("contentDiv");
-var paintStyle = getComputedStyle(painting);
+var painting = document.getElementById("coverCanvas");
+var paintStyle = window.getComputedStyle(painting);
 canvas.width = parseInt(paintStyle.getPropertyValue("width"));
 canvas.height = parseInt(paintStyle.getPropertyValue("height"));
 
@@ -23,6 +23,8 @@ ctx.lineCap = 'round';
 ctx.strokeStyle = 'Black';
 
 canvas.addEventListener('mousedown', function (e) {
+    mouse.x = e.pageX - this.offsetLeft;
+    mouse.y = e.pageY - this.offsetTop;
     console.log("Mouse Down, X: " + mouse.x + ", Y: " + mouse.y);
     ctx.beginPath();
     ctx.moveTo(mouse.x, mouse.y);
@@ -41,3 +43,16 @@ var onPaint = function (e) {
     ctx.lineTo(mouse.x, mouse.y);
     ctx.stroke();
 };
+
+
+function changeSize(e){
+    ctx.lineWidth = e;
+}
+
+function changeColor(e){
+    ctx.strokeStyle = e;
+}
+function clear(){
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+}

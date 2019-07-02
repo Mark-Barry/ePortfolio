@@ -11,6 +11,7 @@
 	<script src="../Scripts/myScripts.js"></script>
 
 
+
 	<title>
 		Brandon Sanderson Library: Design a Cover
 	</title>
@@ -33,11 +34,42 @@
 	</ul>
 
 	<div id="contentDiv">
-		<canvas id="coverCanvas">
+		<div id="content">
+			<canvas id="coverCanvas">
 
-		</canvas>
+			</canvas>
+		</div>
+		<div id="controls">
+			<input type="button" class="colorButton" style="background-color:black" onclick="changeColor('black')">
+			<input type="button" class="colorButton" style="background-color:grey" onclick="changeColor('grey')">
+			<input type="button" class="colorButton" style="background-color:red" onclick="changeColor('red')">
+			<input type="button" class="colorButton" style="background-color:orange" onclick="changeColor('orange')">
+			<input type="button" class="colorButton" style="background-color:yellow" onclick="changeColor('yellow')">
+			</br>
+			<input type="button" class="colorButton" style="background-color:green" onclick="changeColor('green')">
+			<input type="button" class="colorButton" style="background-color:blue" onclick="changeColor('blue')">
+			<input type="button" class="colorButton" style="background-color:indigo" onclick="changeColor('indigo')">
+			<input type="button" class="colorButton" style="background-color:violet" onclick="changeColor('violet')">
+			<input type="button" class="colorButton" style="background-color:brown" onclick="changeColor('brown')">
+			</br>
+			<input type="button" class="colorButton" style="background-color:white" onclick="changeColor('white')">
+
+			</br>
+			<input type="button" value="Small" onclick="changeSize(1)">
+			<input type="button" value="Medium" onclick="changeSize(3)">
+			</br>
+			<input type="button" value="Large" onclick="changeSize(8)">
+			<input type="button" value="Extra Large" onclick="changeSize(16)">
+			</br>
+			<input type="button" value="HUGE!!!" onclick="changeSize(100)">
+			</br>
+			<input type="button" value="Clear Canvas" onclick="clear()">
+		</div>
 	</div>
 
+
+	<script src="../Scripts/testCanvas.js"></script>
+	<script src="../Scripts/testCanvas.js"></script>
 	<script src="../Scripts/canvasScripts.js"></script>
 </body>
 
