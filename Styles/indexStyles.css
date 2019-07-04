@@ -8,3 +8,17 @@
     from{background-color: black;}
     to{background-color: darkgray;}
 }
+
+#indexBookImage{
+    width: 30%;
+    height: auto;
+    margin-top: 5%;
+
+}
+.rotate {
+    animation: rotation 40s infinite linear;
+  }
+@keyframes rotation{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(359deg);}
+}
