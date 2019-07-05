@@ -52,9 +52,7 @@ function changeSize(e){
 function changeColor(e){
     ctx.strokeStyle = e;
 }
-function clear(){
-    ctx.beginPath();
-ctx.rect(40, 40, 150, 100);
-ctx.fillStyle = "blue";
-ctx.fill();
+
+function clearArea() {
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 }

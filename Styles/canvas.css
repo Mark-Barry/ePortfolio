@@ -18,13 +18,6 @@
     background-color: white;
 }
 
-#myCanvas{
-    width : "500px";
-    height : "200px";
-    border : 2px solid black;
-    background-color: white;
-}
-
 .colorButton{
     margin: 0.1%;
     width: 20%;

@@ -63,9 +63,4 @@ $(function () {
         }
     }
 
-    $("#bookImg").click(function () {
-        $(".bookImageDiv").css("display", "block");
-        let displayImageSrc = $(this).attr("src");
-        $(".modal").css
-    });
 });
