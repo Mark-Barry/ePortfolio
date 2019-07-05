@@ -54,8 +54,7 @@ $(function () {
                 //From here on is all the information relating to the book
                 let book = $("<h2>", {
                     "id": "bookName"
-                }).append(bookLis
-                    t[i].series + ": " + bookList[i].numberInSeries + ", " + bookList[i].name);
+                }).append(bookList[i].series + ": " + bookList[i].numberInSeries + ", " + bookList[i].name);
 
                 $('.bookDescDiv').append(bookDescDiv);
                 let bookDesc = $("<p>", {
