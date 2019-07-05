@@ -11,8 +11,8 @@ var mouse = {
 };
 
 canvas.addEventListener('mouseover', function (e) {
-    console.log("Mouse Over");
-    console.log("X: " + mouse.x + ", Y: " + mouse.y);
+    // console.log("Mouse Over");
+    // console.log("X: " + mouse.x + ", Y: " + mouse.y);
     mouse.x = e.pageX - this.offsetLeft;
     mouse.y = e.pageY - this.offsetTop;
 }, false);
@@ -25,21 +25,21 @@ ctx.strokeStyle = 'Black';
 canvas.addEventListener('mousedown', function (e) {
     mouse.x = e.pageX - this.offsetLeft;
     mouse.y = e.pageY - this.offsetTop;
-    console.log("Mouse Down, X: " + mouse.x + ", Y: " + mouse.y);
+    // console.log("Mouse Down, X: " + mouse.x + ", Y: " + mouse.y);
     ctx.beginPath();
     ctx.moveTo(mouse.x, mouse.y);
     canvas.addEventListener('mousemove', onPaint, false);
 }, false);
 
 canvas.addEventListener('mouseup', function () {
-    console.log("Mouse Up");
+    // console.log("Mouse Up");
     canvas.removeEventListener('mousemove', onPaint, false);
 }, false);
 
 var onPaint = function (e) {
     mouse.x = e.pageX - this.offsetLeft;
     mouse.y = e.pageY - this.offsetTop;
-    console.log("Paint, X: " + mouse.x + ", Y: " + mouse.y);
+    // console.log("Paint, X: " + mouse.x + ", Y: " + mouse.y);
     ctx.lineTo(mouse.x, mouse.y);
     ctx.stroke();
 };

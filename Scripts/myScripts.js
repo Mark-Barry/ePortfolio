@@ -79,7 +79,6 @@ $(function () {
 
             let bookDate = $("<h3>").append("Date Published: " + bookList[i].datePublished);
             div.append(bookDate);
-            console.log(count);
             count += 1;
         }
     }
