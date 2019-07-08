@@ -29,7 +29,7 @@
 			<canvas id="coverCanvas">
 
 			</canvas>
-		</div>
+		
 		<div id="controls">
 			<input type="button" class="colorButton" style="background-color:black" onclick="changeColor('black')">
 			<input type="button" class="colorButton" style="background-color:grey" onclick="changeColor('grey')">
@@ -47,14 +47,22 @@
 
 			</br>
 			<input type="button" value="Small" onclick="changeSize(1)">
-			<input type="button" value="Medium" onclick="changeSize(3)">
+			<input type="button" value="Medium" onclick="changeSize(50)">
+			<input type="button" value="Large" onclick="changeSize(100)">
+			<!-- <input type="button" value="Extra Large" onclick="changeSize(16)">
 			</br>
-			<input type="button" value="Large" onclick="changeSize(8)">
-			<input type="button" value="Extra Large" onclick="changeSize(16)">
+			<input type="button" value="HUGE!!!" onclick="changeSize(100)"> -->
 			</br>
-			<input type="button" value="HUGE!!!" onclick="changeSize(100)">
+			</br>
+			<input type="range" min="1" max="100" value="3" class="slider" id="myRange"
+				onchange="changeSize(this.value)">
+			</br>
 			</br>
 			<input type="button" value="Clear Canvas" onclick="clearArea()">
+
+</div>
+
+
 		</div>
 	</div>
 

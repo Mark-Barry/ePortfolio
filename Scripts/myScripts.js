@@ -104,7 +104,5 @@ if ("serviceWorker" in navigator) {
 	});
 
 } else {
-
 	console.log("SW not supported.");
-
-};
+}
