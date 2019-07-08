@@ -1,5 +1,6 @@
 // --------------------------------Only Chashing content--------------------------
 
+
 const cacheName = "v2";
 
 self.addEventListener("install", e => {
