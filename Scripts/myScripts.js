@@ -106,3 +106,8 @@ if ("serviceWorker" in navigator) {
 } else {
 	console.log("SW not supported.");
 }
+
+/*
+    Websocket Tutorial Link:
+        https://www.tutorialspoint.com/html5/html5_websocket.htm
+*/
