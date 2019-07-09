@@ -69,3 +69,17 @@
     background: #4CAF50;
     cursor: pointer;
   }
+
+  #drawBookDiv{
+    width: 35%;
+    height: auto;
+    float: left;
+    margin: 0%;
+  }
+
+  .bookImg{
+    width: 60%;
+    height: 20%;
+    float: left;
+    margin: 0.2%;
+  }

@@ -2,6 +2,7 @@ var canvas = document.getElementById("coverCanvas");
 var ctx = canvas.getContext("2d");
 var painting = document.getElementById("coverCanvas");
 var paintStyle = window.getComputedStyle(painting);
+var image;
 canvas.width = parseInt(paintStyle.getPropertyValue("width"));
 canvas.height = parseInt(paintStyle.getPropertyValue("height"));
 
@@ -45,14 +46,60 @@ var onPaint = function (e) {
 };
 
 
-function changeSize(e){
+function changeSize(e) {
     ctx.lineWidth = e;
 }
 
-function changeColor(e){
+function changeColor(e) {
     ctx.strokeStyle = e;
 }
 
 function clearArea() {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 }
+
+function imageToDraw(e) {
+    console.log("Book " + e + " clicked.");
+    ctx.drawImage(e,0,0);
+}
+
+
+$(function () {
+    $.ajax({
+        type: "GET",
+        url: "../Data/Books.csv",
+        dataType: "text",
+        success: function (data) {
+            displayData(data);
+        }
+    });
+
+    var count = 0;
+
+    function displayData(data) {
+        var bookList = $.csv.toObjects(data);
+        for (var i = 0; i < bookList.length; ++i) {
+
+            let div = $("<div>", {
+                "class": "bookDiv",
+                "id": "book-" +
+                    i,
+            });
+
+            let br = $("<br>");
+
+            $("#drawBookDiv").append(div);
+
+            let bookImg = $("<img>", {
+                "src": bookList[i].image,
+                "class": "bookImg"
+            });
+            
+            div.append(bookImg);
+
+            $(bookImg).click(function () {
+                imageToDraw($(this).attr('src'));
+            });
+        }
+    }
+});
