@@ -18,3 +18,25 @@
     width: 50%;
     height: 50%;
 }
+
+@media only screen and (max-width: 1050px){
+    #homeContentDiv{
+        width: 100%;
+    }
+    #descDiv{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        float: bottom;
+        width: 100%;
+        text-align: center;
+    }
+    #imageDiv{
+        float: top;
+        width: 100%;
+        text-align: center;
+    }
+    #imageDiV #portrait{
+        width: 75%;
+        height: auto;
+    }
+
+}

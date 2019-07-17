@@ -83,3 +83,22 @@
     float: left;
     margin: 0.2%;
   }
+
+  #mobileSite{
+    visibility: hidden;
+    width: 100%;
+    text-align: center;
+    color: red;
+  }
+
+  @media only screen and (max-width: 1050px){
+    #content{
+      visibility: hidden;
+  }
+
+  #mobileSite{
+    visibility: visible;
+  }
+
+
+  }

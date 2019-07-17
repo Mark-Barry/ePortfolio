@@ -2,16 +2,13 @@
   an entire tag. what happens when you forget you've overrriden the tag?
   Nothing fun.
 
-  This CSS is full of this overriding a tag shit. I need to fix it.
+  This CSS is full of this overriding a tag. I need to fix it.
 */
 .bgImage{
     background-color: darkgrey;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../Resources/Images/smoke_slow.gif);
-    /* opacity: 0.9; */
-    /* animation-name: fadeIn;
-    animation-duration: 1.5s; */
 }
 
 #contentDiv{
@@ -147,3 +144,26 @@ li.dropdown {
     margin: 10px;
     color: red;
 }
+
+
+@media only screen and (max-width: 1050px) {
+    .bgImage {
+      background-color: grey;
+      background-image: none;
+    }
+
+    .bookDiv{
+        float: left;
+        text-align: center;
+        width: 90%;
+    }
+    .bookImg {
+        width: 80%;
+        height: auto;
+        
+    }
+    .seriesH1{
+        display: initial;
+        color: red;
+    }
+  }

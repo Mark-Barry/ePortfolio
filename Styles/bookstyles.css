@@ -31,3 +31,33 @@ top: 0px;
 left: 0px;
 
 }
+
+@media only screen and (max-width: 1050px){
+
+    .bookImgDiv{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .bookDescDiv{
+        width: 100%;
+        text-align: left;
+    }
+    
+    #bookImg{
+        width: 80%;
+        height: auto;
+    }
+    
+    .addCont{
+        float: left;
+        text-align: left;
+        width: 50%;
+        position: unset;
+    }
+
+    .modal{
+    display: none;
+    position: fixed;
+    }
+}

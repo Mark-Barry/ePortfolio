@@ -22,3 +22,14 @@
     from{transform: rotate(0deg);}
     to{transform: rotate(359deg);}
 }
+
+@media only screen and (max-width: 1050px){
+    .indexbgImage{
+        background-color: darkgray;
+    }
+    
+    #indexBookImage{
+        width: 80%;
+        height: auto;
+    }
+}

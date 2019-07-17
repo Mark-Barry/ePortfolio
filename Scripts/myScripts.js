@@ -90,21 +90,21 @@ $(function () {
 
 if ("serviceWorker" in navigator) {
 
-	// Listen for the event when the windows is loading
-	window.addEventListener("load", () => {
+    // Listen for the event when the windows is loading
+    window.addEventListener("load", () => {
 
-		navigator.serviceWorker
-		// Register Service Worker file
-		.register("../sw_cached_site.js")
-		// Promise with the registration object
-		.then(reg => console.log("SW Registered."))
-		// Error handling
-		.catch(err => console.log(`SW Error: ${err}`));
+        navigator.serviceWorker
+            // Register Service Worker file
+            .register("../sw_cached_site.js")
+            // Promise with the registration object
+            .then(reg => console.log("SW Registered."))
+            // Error handling
+            .catch(err => console.log(`SW Error: ${err}`));
 
-	});
+    });
 
 } else {
-	console.log("SW not supported.");
+    console.log("SW not supported.");
 }
 
 /*
