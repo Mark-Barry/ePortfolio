@@ -1,9 +1,13 @@
 /*
-    
+    This css file contains all the styles to be applied to the About.html page
 */
+/* This is applied to a div that contains the main content for the page */
 #homeContentDiv{
     width: 100%;
 }
+/* This creates a div that will contain the descriptive details for Brandon Sanderson
+    &
+    Sets the styles to be applied to the content within this div*/
 #descDiv{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 1%;
@@ -11,17 +15,19 @@
     width: 60%;
     text-align: left;
 }
+/* This create a div to hold an image */
 #imageDiv{
     float: left;
     width: 35%;
     text-align: center;
 }
+/* This styling is applied to the image held in the #imageDiv */
 #imageDiV #portrait{
     margin-top: 5%;
     width: 50%;
     height: 50%;
 }
-
+/* This is to change the style of the content if it's being displayed on a mobile device. */
 @media only screen and (max-width: 1050px) {
     #homeContentDiv{
         width: 100%;

@@ -1,34 +1,61 @@
-.indexbgImage{
+/* 
+    This css file conatians all the styling for the index page
+*/
+
+/* This sets the back ground color, it was origionally an image but
+    the image was removed to aid in loading time, it also calls the
+    changeBG method to change the color */
+.indexbgImage {
     animation-name: changeBG;
     animation-duration: 3s;
     background-color: darkgray;
 }
 
-@keyframes changeBG{
-    from{background-color: black;}
-    to{background-color: darkgray;}
+/* This changes the background color from black to dark grey by the time 
+specified in the indexbgImage method*/
+@keyframes changeBG {
+    from {
+        background-color: black;
+    }
+
+    to {
+        background-color: darkgray;
+    }
 }
 
-#indexBookImage{
+/* This sets the width of the image located on the index page */
+#indexBookImage {
     width: 30%;
     height: auto;
     margin-top: 5%;
 
 }
+
+/* This rotate is applied to the index page image */
 .rotate {
     animation: rotation 40s infinite linear;
-  }
-@keyframes rotation{
-    from{transform: rotate(0deg);}
-    to{transform: rotate(359deg);}
 }
 
-@media only screen and (max-width: 1050px){
-    .indexbgImage{
+/* This rotates whatever it is applied to by 359 degrees over the time
+specified in the method that calls it. */
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* This changes the css held within it for any device that accesses the webpage
+and has a screen size less then 1050 px in width */
+@media only screen and (max-width: 1050px) {
+    .indexbgImage {
         background-color: darkgray;
     }
-    
-    #indexBookImage{
+
+    #indexBookImage {
         width: 80%;
         height: auto;
     }

@@ -1,37 +1,37 @@
+/*
+    This css file contains the styling for the book.html page
+*/
 
+
+/* Create a div for the image to be held in and sets 
+the div to be 30% of the screens width */
 .bookImgDiv{
     float: left;
     width: 30%;
     margin: 10px;
     text-align: center;
 }
-
+/* Create a div to contain all the descriptive details of the book */
 .bookDescDiv{
     float: left;
     width: 60%;
     margin: 10px;
     text-align: center;
 }
-
+/* Sets the size of the image withing the image Div */
 #bookImg{
     width: 80%;
     height: auto;
 }
-
+/* This is the additional content for the boo, ISBN, Release Date */
 .addCont{
     float: left;
     text-align: left;
     width: 50%;
     position: unset;
 }
-.modal{
-display: none;
-position: fixed;
-top: 0px;
-left: 0px;
 
-}
-
+/* This is a media query to change the css setting if the screen is below a certain size. */
 @media only screen and (max-width: 1050px){
 
     .bookImgDiv{
@@ -54,10 +54,5 @@ left: 0px;
         text-align: left;
         width: 50%;
         position: unset;
-    }
-
-    .modal{
-    display: none;
-    position: fixed;
     }
 }

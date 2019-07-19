@@ -1,3 +1,5 @@
+<!--This page contains a canvas for users to create their own 
+	Book covers. -->
 <html lang="en">
 
 <head>
@@ -8,7 +10,6 @@
 
 	<link rel="stylesheet" href="../Styles/myStyles.css" />
 	<link rel="stylesheet" href="../Styles/canvas.css" />
-	<!-- <script src="../sw_cached_site.js"></script> -->
 	<script src="../Scripts/myScripts.js"></script>
 
 	<title>
@@ -24,36 +25,44 @@
 		<li><a href="./About.html">About</a></li>
 		<li><a href="./Contact.html">Contact</a></li>
 	</ul>
+	<!-- This div is hidden unless the site is being accessed on a mobile device -->
 	<div id="mobileSite">
 			<h1>Sorry, This feature is not supported on mobile devices.</h1>
 		</div>
 	<div id="contentDiv">
 		<div id="content">
+			<!--This is the container for the canvas-->
 			<canvas id="coverCanvas">
 
 			</canvas>
-
+			<!-- This is all the controls for the canvas painter -->
 			<div id="controls">
+				<!-- These buttons set the color of the painting tool -->
 				<input type="button" class="colorButton" style="background-color:black" onclick="changeColor('black')">
 				<input type="button" class="colorButton" style="background-color:grey" onclick="changeColor('grey')">
 				<input type="button" class="colorButton" style="background-color:white" onclick="changeColor('white')">
 				</br>
+				<!--This is a color picker to allow the user to pick a specific color-->
 				<input type="color" value="#000000" onchange="changeColor(this.value)" onclick="changeColor(this.value)"
 					class="colorPicker">
 				</br>
 				</br>
+				<!-- These buttons set the size of the painting tool -->
 				<input type="button" value="Small" onclick="changeSize(1)">
 				<input type="button" value="Medium" onclick="changeSize(50)">
 				<input type="button" value="Large" onclick="changeSize(100)">
 				</br>
 				</br>
+				<!--This is a slider to allow the user to select a specific brush size-->
 				<input type="range" min="1" max="100" value="3" class="slider" id="myRange"
 					onchange="changeSize(this.value)">
 				</br>
 				</br>
+				<!--This button clears everything from the canvas.-->
 				<input type="button" value="Clear Canvas" onclick="clearArea()">
 			</div>
-
+			<!--This div contains the books from the .csv file, that when clicked on
+				should appear in the canvas so users can draw over them.-->
 			<div id="drawBookDiv">
 
 			</div>

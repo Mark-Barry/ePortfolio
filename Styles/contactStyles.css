@@ -1,3 +1,8 @@
+/* 
+    This css file contains all the styling to be appied to the Contact.html page
+*/
+
+/* This sets up the form that the user will be using to send feedback or thoughts */
 form{
     width: 95%;
     height: auto;
@@ -7,32 +12,32 @@ form{
     color: white;
     opacity: 0.8;
 }
-
+/* This is a div which contains as prompt for the users name and a box for them to fill out */
 .nameDiv{
     margin-left: 2%;
     text-align: left;
     width: 45%;
     float: left;
 }
-
+/* This is applied to a prompt for the user to input their name */
 .nameDivContent20{
     width: 13%;
     float: left;
     align-content: right;
 }
-
+/* This is applied to an input box for the user to input thier name */
 .nameDivContent{
     width: 45%;
     float: left;
 }
-
+/* This is applied to a larger input box where the user will input their feedback or thoughts */
 #contactText{
     width: 90%;
     height: 33%;
     margin: 3%;
     text-align: left;
 }
-
+/* Applied to thae submit button  */
 #submitButton{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: large;
@@ -40,24 +45,24 @@ form{
     width: 10%;
     height: 4%;
 }
-
+/* Applied to the submit button when a user hovers over it */
 #submitButton:hover{
     background-color: bisque;
     width: 12%;
     height: 5%;
     font-size: xx-large;
 }
-
+/* This is a div which a google form is inserted into */
 #contactForm{
     width: 50%;
     height: 1125px;
     margin: 2%;
 }
-
+/* This is applied to the google form */
 #googleForm{
     text-align: center;
 }
-
+/* This is to change the styling of the webpage if it's being displayed on a mobile device */
 @media only screen and (max-width: 1050px) {
     #contactForm{
         width: 100%;
@@ -66,5 +71,40 @@ form{
     
     #googleForm{
         text-align: center;
+    }
+
+    form{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        background-color: black;
+        color: white;
+    }
+    
+    .nameDiv{
+        text-align: left;
+        width: 100%;
+    }
+    
+    .nameDivContent20{
+        width: 40%;
+        align-content: right;
+    }
+    
+    .nameDivContent{
+        width: 60%;
+        float: left;
+    }
+    
+    #contactText{
+        width: 90%;
+        height: 33%;
+    }
+    
+    #submitButton{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: large;
+        width: 50%;
+        height: 10%;
     }
 }

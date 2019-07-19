@@ -1,104 +1,102 @@
-#content{
-    width: 100%;
-    height: auto;
-    text-align: center;
-    background-color: white;
-    margin-top: 1%;
-    margin-right: 1%;
+/* 
+	This css file conatian all the styling for the DesignACover.html page
+*/
+
+/* This is applied to a div which contains all the main content for the page. */
+#content {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	background-color: white;
+	margin-top: 1%;
+	margin-right: 1%;
+}
+/* This is the actual cnavas itself */
+#coverCanvas {
+	float: left;
+	margin-left: 1%;
+	margin-right: 1%;
+	width: 508px;
+	height: 701px;
+	border: 2px solid black;
+	background-color: white;
+}
+/* This is applied to buttons that change the brush color */
+.colorButton {
+	margin: 0.1%;
+	width: 9%;
+	height: 4%;
+}
+/* This is applied to an object that allows the user to pick a specific color */
+.colorPicker {
+	margin: 0.1%;
+	width: 30%;
+	height: 6%;
 }
 
-#coverCanvas{
-    float: left;
-    margin-left: 1%;
-    margin-right: 1%;
-    width: 508px;
-    height: 701px;
-    border: 2px solid black;
-    background-color: white;
+/* This is applied to a div whick contains all the canvas controls
+	Brush size, brush color & clear canvas */
+#controls {
+	text-align: left;
+	float: left;
+	width: 30%;
+	float: left;
 }
 
-.colorButton{
-    margin: 0.1%;
-    width: 9%;
-    height: 4%;
-}
-
-.colorPicker{
-    margin: 0.1%;
-    width: 30%;
-    height: 6%;
-    padding: 0%;
-    margin: 0%;
-}
-
-#controls{
-    text-align: left;
-    float: left;
-    width: 30%;
-    float: left;
-}
-
+/* This is a slider that allows the user to select a more specific brush size */
 .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 25px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-    border: 1px solid black;
-  }
-  
-  .slider:hover {
-    opacity: 1;
-  }
+	-webkit-appearance: none;
+	width: 100%;
+	height: 25px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	transition: opacity .2;
+	border: 1px solid black;
+}
+/* This changes the opacity of the slider to a appear more solid when it is hovered over */
+.slider:hover {
+	opacity: 1;
+}
+/* This changes the appearance of the "thumb" on the slider so it isn't the basic one*/
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	background: #4CAF50;
+	cursor: pointer;
+}
+/* This creates a div to draw books to from the csv file */
+#drawBookDiv {
+	width: 35%;
+	height: auto;
+	float: left;
+	margin: 0%;
+}
+/* This sets the sizes of the books being drawn from the csv file */
+.bookImg {
+	width: 60%;
+	height: 20%;
+	float: left;
+}
+/* This is a div which is initially hidden unless unless the device being used is a mobile device */
+#mobileSite {
+	visibility: hidden;
+	width: 100%;
+	text-align: center;
+	color: red;
+}
+/* This is used when the site is on a mobile device
+	It simply hides the main content on the page
+	&
+	Displays the content hidden in the #mobileSite div*/
+@media only screen and (max-width: 1050px) {
+	#content {
+		visibility: hidden;
+	}
 
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: #4CAF50;
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #4CAF50;
-    cursor: pointer;
-  }
-
-  #drawBookDiv{
-    width: 35%;
-    height: auto;
-    float: left;
-    margin: 0%;
-  }
-
-  .bookImg{
-    width: 60%;
-    height: 20%;
-    float: left;
-    margin: 0.2%;
-  }
-
-  #mobileSite{
-    visibility: hidden;
-    width: 100%;
-    text-align: center;
-    color: red;
-  }
-
-  @media only screen and (max-width: 1050px){
-    #content{
-      visibility: hidden;
-  }
-
-  #mobileSite{
-    visibility: visible;
-  }
-
-
-  }
+	#mobileSite {
+		visibility: visible;
+	}
+}

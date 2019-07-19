@@ -1,3 +1,7 @@
+// 
+// 
+// 
+
 var canvas = document.getElementById("coverCanvas");
 var ctx = canvas.getContext("2d");
 var painting = document.getElementById("coverCanvas");

@@ -1,6 +1,12 @@
+/* This .css file conatains all the styling for the home page */
+
+/* This sets the width of the div which conatains all the content for the page. */
 #homeContentDiv{
     width: 100%;
 }
+/* This sets the styles to be applied to the description
+    &
+    Sets the width of the content to 60% */
 #descDiv{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 5%;
@@ -8,17 +14,21 @@
     width: 60%;
     text-align: center;
 }
+/* This creates a div to hold an image inside of,
+    and sets the divs width to be 35% */
 #imageDiv{
     float: left;
     width: 35%;
     text-align: center;
 }
+/* This sets the styles to be applied to the image held inside the 
+#imageDiv method above.  */
 #imageDiV #portrait{
     margin-top: 5%;
     width: 50%;
     height: 50%;
 }
-
+/* This changes the pages css based on the screen width to aid in displaying on mobile devices. */
 @media only screen and (max-width: 1050px){
     #homeContentDiv{
         width: 100%;

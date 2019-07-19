@@ -1,10 +1,14 @@
+<!-- The index page loads up before any other page
+    There is a 3 second wait period before it transfers
+    you to the  home.html page-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="./sw_cached_site.js"></script> -->
+    <!-- Set the 3 second wait and where to redirect to after 3 seconds -->
     <meta http-equiv='refresh' content='3; ./Pages/Home.html' />
     <link rel="stylesheet" href="./Styles/myStyles.css" />
     <link rel="stylesheet" href="./Styles/indexStyles.css" />
@@ -14,7 +18,10 @@
         Brandon Sanderson Library: index
     </title>
 </head>
-
+<!-- Content to fill the page
+    A link to the home page incase the redirect doesnt work
+    &
+    An svg image to give the user something to look at as the redirect takes effect. -->
 <body class="indexbgImage">
     <center>
         <p>If you fail to redirect within 5 seconds click <a href="./Pages/Home.html">HERE</a></p>
